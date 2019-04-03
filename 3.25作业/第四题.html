@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>第四题</title>
+</head>
+
+<body>
+
+    <div id="app">
+        <span>{{year}}:</span>
+        <span>{{month}}:</span>
+        <span>{{day}}:</span>
+        <span>{{hours}}:</span>
+        <span>{{min}}:</span>
+        <span>{{secd}}</span>
+    </div>
+    <script src="vue.js"></script>
+    <script>
+
+        new Vue({
+            el: "#app",
+            data: {
+                year: '',
+                month: '',
+                day: '',
+                hours: '',
+                min: '',
+                secd: '',
+            },
+            created() {
+
+                setInterval(() => {
+                    let target = new Date("2019-6-6").getTime();//时间戳
+                    let date = new Date();
+                    let year = date.getFullYear();
+                    let month = date.getMonth()+1;
+                    let day = date.getDate();
+                    let hours = date.getHours();
+                    let min = date.getMinutes();
+                    let secd = date.getSeconds();
+                    this.year = year;
+                    this.month = month;
+                    this.day = day;
+                    this.hours = hours;
+                    this.min = min;
+                    this.secd = secd;
+                }, 1000)
+            }
+        })
+    </script>
+</body>
+
+</html>

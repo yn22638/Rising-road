@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        //盗的
+        var arr = [5, 50, 6, 11, 18, 62, 31, 52, 19];
+        Array.prototype.bubbleSort = function () {
+            var len = this.length;
+            for (var i = len; i >= 2; i--) {
+                for (var j = 0; j < i; j++) {
+                    if (this[j] > this[j + 1]) {
+                        //两个元素调换位置
+                        var temp = this[j];
+                        this[j] = this[j + 1];
+                        this[j + 1] = temp;
+                    }
+                }
+            }
+            return this;
+        }
+        console.log(arr.bubbleSort());
+
+
+        //自己
+        var array = [5, 50, 6, 11, 18, 62, 31, 52, 19];
+        var res = array.sort(function (a, b) { return a - b });
+        console.log(res);
+
+        //盗
+        var arr = [5, 50, 6, 11, 18, 62, 31, 52, 19];
+        function bubbleSort(arr) {
+            var len = arr.length;
+            for (var i = 0; i < len - 1; i++) {
+                for (var j = 0; j < len - 1 - i; j++) {
+                    if (arr[j] > arr[j + 1]) {        // 相邻元素两两对比
+                        var temp = arr[j + 1];        // 元素交换
+                        arr[j + 1] = arr[j];
+                        arr[j] = temp;
+                    }
+                }
+            }
+            return arr;
+        }
+    </script>
+</body>
+
+</html>
