@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>世界你好！</h1>
+
+
+    <ul>
+        <li>香蕉</li>
+        <li>苹果</li>
+        <li>橘子</li>
+    </ul>
+    <script>
+        var h1 = document.querySelector("h1");
+        h1.style.color = "red";
+
+
+
+        var array = document.querySelectorAll("li");
+        for (var i = 0; i < array.length; i++) {
+            array[i].style.color = "blue";
+
+        }
+
+
+
+    //标准的for循环
+    /*var array=["a"]
+    for(var i=1;i<array.length;i++){
+        alert(array[i])
+    }*/
+
+
+
+    //foreach循环
+    /*for(var i in array){
+    alert(array[i])
+    }*/
+    
+
+
+
+
+
+    var arr=[11,22,33,44,55,66,77,88,99]
+    for(var i=arr.length-1;i>-1;i--){
+        document.write(arr[i])
+    }
+    </script>
+</body>
+
+</html>

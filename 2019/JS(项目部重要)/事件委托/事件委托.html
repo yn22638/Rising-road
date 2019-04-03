@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="btnBox">
+        <button class="btn1">按钮1</button>
+        <button class="btn2">按钮2</button>
+    </div>
+    <script>
+        // var btn1 = document.querySelector(".btn1");
+        // var btn2 = document.querySelector(".btn2");
+        // btn1.addEventListener("click", function () {
+        //     console.log(this.innerHTML)
+        // })
+        // btn2.addEventListener("click", function () {
+        //     console.log(this.innerHTML)
+        // })
+
+        //这种方法简单易懂，但是存在重复，两个按钮触发事件执行的代码完全
+        //一样，我们可以过去到所有按钮，再通过遍历绑定事件
+
+
+
+        // var btnArray = document.querySelectorAll("button");
+        // for (var i = 0; i < btnArray.length; i++) {
+        //     btnArray[i].addEventListener("click", function () {
+        //         console.log(this.innerHTML)
+        //     })
+        // }
+
+        //通过遍历我们优化了代码，但是仍然存在问题，首先，如果按钮的数量特别多，
+        //每一个按钮都绑定依次事件会非常影响程序的性能，其次，就算不考虑性能，通过这种
+        //方法绑定事件，如果使用js新增了一个按钮，这个按钮因为初始化的时候没有绑定事件，
+        //所以无法点击。为了解决上述问题，我们可以使用事件委托的方式来实现上面的功能
+
+
+        var btnBox = document.querySelector(".btnBox");
+        btnBox.addEventListener("click", function (event) {
+            var target = event.target;    //通过事件对象获取事件目标
+            console.log(target.innerHTML);
+        })
+
+        //在事件监听函数中，我们可以在形参的位置获取到事件对象event，事件对象中包含了
+        //事件相关的信息，通过event.target可以获取到我们的事件目标，在这个例子中事件目标
+        //就是我们点击的按钮，而我们事件绑定的是按钮的容器，这样就可以将自己元素的事件委托给父级来处理。
+
+    </script>
+</body>
+
+</html>

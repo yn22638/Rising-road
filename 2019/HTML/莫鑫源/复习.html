@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .d1{
+            width: 40%;
+            height: 100%;
+            border: 1px solid red;
+            float: left;
+        }
+        .d1 ol{
+            line-height: 40px;
+            animation: a 8s linear infinite;
+            animation-direction: alternate;
+            font-size: 20px;
+        }
+        .d2{
+            width: 40%;
+            height: 100%;
+            border: 1px solid blue;
+            float: left;
+        }
+        .d2 ol{
+            font-size: 20px;
+            line-height: 40px;
+            animation: b 10s linear infinite;
+        }
+        /* @keyframes a{
+            10%{
+                color:red; 
+            }
+            20%{
+            
+                 color: aqua;
+            }
+            30%{
+                color: rgb(241, 100, 18);
+            }
+            40%{
+                color: black;
+            }
+            50%{
+                color: blue;
+            }
+            60%{
+                color: saddlebrown;
+            }
+            70%{
+                color: blueviolet;
+            }
+            80%{
+                color: chartreuse;
+            }
+            90%{
+                color:yellow;
+            }
+            100%{
+                color: fuchsia;
+            }
+        }
+        @keyframes b{
+            10%{
+                color:forestgreen; 
+            }
+            20%{
+                color: tomato;
+            }
+            30%{
+                color: aqua;
+             }
+            40%{
+                color: chocolate;
+            }
+            50%{
+                color: blue;
+            }
+            60%{
+                color: red;
+            }
+            70%{
+                color: blueviolet;
+            }
+            80%{
+                color: navy;
+            }
+            90%{
+                color:yellow;
+            }
+            100%{
+                color: fuchsia;
+            }
+        } */
+    </style>
+</head>
+<body>
+    <div class="d1">
+        <h2>html是最基本的标签，他是超文本标记语言</h2>
+        <h3>常用标
+            签</h3>
+        <ol>
+            <li>
+                p标签：段落标签，用来显示网页中的段落行文字
+            </li>
+            <li>
+                a:超链接标签又称跳转标签
+                <br>
+                访问同级文件,
+                <br>
+                访问父级文件
+                <br>
+                访问子级文件 
+            </li>
+            <li>
+                img:图片标签（Ta没有闭合标签）;自带src与alt属性
+                <br>
+                src来表示填写路径
+                <br>
+                alt用来在图片显示失败的时候，才能显示属性中的内容
+            </li>
+            <li>
+                span标签：无语义标签 没有任何影响。
+            </li>
+            <li>
+                div：认为定义盒子标签，可以使代码更简洁，页面更清晰
+            </li>
+            <li>
+                button:按钮标签，多数用来处理 处理交互行为（有来有往交互）
+            </li>
+            <li>
+                无序列表：由ul与li共同组成。
+                ul：包围里面的内容，
+                li：填写具体的每一项内容。
+            </li>
+            <li>
+                有序列表：由ol与li共同组成
+                ul：包围里面的内容，
+                li：填写具体的每一项内容。
+            </li>
+            <li>
+                input:自带type属性，默认属性值为text，
+                表现为文本框
+            </li>
+            <li>
+                input:属性值为button，表现形式极为按钮。
+            </li>
+            <li>
+                input:属性值为radio时，手动添加name，多个name属性一样的可成为单选框效果。
+            </li>
+            <li>
+                input:属性值位checkbox时，手动添加name值，多个name属性一样的可成为单选框效果。
+            </li>
+            <li>
+                input:属性值为file时，即可实现上传文件效果。
+            </li>
+            <li>
+                input:属性值伪password时，效果为密码输入框。
+            </li>
+            <li>
+                input:属性值为email时，效果为邮箱输入框。
+            </li>
+            <li>
+                Input:直为number时，效果为数字输入框。
+            </li>
+            <li>
+                input:值为url时，效果为网址输入框
+            </li>
+            <li>
+                input:值为time时，效果为时间输入框
+            </li>
+            <li>
+                input:值为color时，效果为取色器
+            </li>
+            <li>
+                input:值为date时，效果为日期输入框
+            </li>
+            <li>
+                input:值为datetime-local，效果为时间日期输入框
+            </li>
+            <li>
+                datalist>option时option的value值与属性值一样时，即可显示，
+                保证输入框的list属性与datalist里id的属性一样时。
+            </li>
+            <li>
+                table:表格标签，table包围表格里所有的行和列，分为表头，表身，表尾。
+            </li>
+            <li>
+                select:下拉框，用select包围着option，
+            </li>
+            <li>
+                label:标记标签
+            </li>
+            <h2>HTML5新增的标签</h2>
+            <li>
+                header;
+                <br>
+                footer;
+                <br>
+                aside;
+                <br>
+                address;
+                <br>
+                pre;
+                <br>
+                nav;
+                <br>
+                section;
+                <br>
+            </li>
+            <li>
+                video;视频标签，自带src 属性;
+                <br>
+                手动添加controls属性值为controls,则进行添加播放控件
+                <br>
+                手动添加autoplay属性值伪autoplay,择进行自动播放，
+                <br>
+                muted静音播放
+            </li>
+            <li>
+                audio；音频标签；
+                <br>
+                手动添加controls属性值为controls,则进行添加播放控件
+                <br>
+                手动添加autoplay属性值伪autoplay,择进行自动播放，
+                <br>
+                muted静音播放
+            </li>
+        </ol>
+    </div>
+   <div class="d2">
+        <h2>css层叠样式表</h2>
+        <h3>常用样式</h3>
+        <ol>
+            <li>
+                width：宽，单位px或%
+            </li>
+            <li>
+                height：高，单位px或%
+            </li>
+            <li>
+                bordr：边框，有三个属性，分别是边框的宽度（px），线的类型，边框的颜色。
+                <br>
+                border-dashed；为边框虚线
+                <br>
+                boder-radius；后面跟百分比或者px；效果为圆形
+                border-bottom-left-radius：左下角半圆。分为上下左右四个方向
+            </li>
+            <li>
+                padding：内编剧，缺点：会改变标签的宽高。
+            </li>
+            <li>
+                margin：外边距，表示俩个边框之间的距离，分别为上下左右4个方向
+            </li>
+            <li>
+                float:浮动，使块级元素脱离文档流，使块级元素不再具备独立成行的特性。
+                <br>
+                浮动分为俩种，分别为左浮动与右浮动
+            </li>
+            <li>
+                clear：both;清除浮动，保留已经浮动的标签，使后面的标签不占位，不补位。
+            </li>
+            <li>
+                伪类选择器：语法：选择器:hover{属性名，属性值}
+            </li>
+            <li>
+                通配符选择器，通常写在网页样式的第一行
+                <br>
+                *{
+                    magin:0px;
+                    padding:0px;
+                }
+            </li>
+            <li>
+                color;改变字体或边框颜色；
+            </li>
+            <li>
+                list-style:none;去掉无序列表的小黑点
+            </li>
+            <li>
+                background-color:为标签添加背景颜色，
+                background-imga：url（）；插入背景图片；
+                background-potion:;调整图片位置，第一个值水平居中，第二个垂直居中。
+                background-size:%,%;调整背景图片大小；
+                background-color：rgba（）；透明背景颜色。
+                background-attachment:fixed;固定定位背景图片。
+            </li>
+            <li>
+                letter-spacing：字体之间的距离。
+            </li>
+            <li>
+                placeholder：文本输入文字。
+            </li>
+            <li>
+                text-algin：center;文字居中
+                <br>
+                text-algin:left;左对齐
+                <br>
+                text-algin:right;右对齐
+                <br>
+                text-decoration:none;去掉a标签的下划线
+            </li>
+            <li>
+                display:none;隐藏标签。
+                <br>
+                display:block;将标签显示.
+            </li>
+            <li>
+                font-family:;字体型号
+                <br>
+                font-size:;改变字体大小
+            </li>
+            <li>
+                line-height:;垂直居中，后边跟标签的高。
+            </li>
+            <li>
+                定位：postion，分为三种，绝对定位，相对定位，固定定位。
+                <br>
+                绝对定位：是脱离文档流，以浏览器的边框为参考，通过top与left来进行移动。
+                <br>
+                相对定位：不脱离文档流，以自身原来的位置作为参考，通过top与left进行移动。
+                <br>
+                固定定位：使标签脱离文档流，以浏览器边框为参考，通过top与left来移动。不随着网页的滚动而移动位置。 
+            </li>
+            <li>
+                box-shadow: px px px color；给背景加阴影，
+                <br>
+                第一个值水平，第二个垂直，第三个模糊程度，第四个颜色。
+            </li>
+            <li>
+                opacity：将标签里的子元素改为透明。
+            </li>
+            <li>
+                overflow：对溢出的部分进行处理，
+                <br>
+                溢出的部分隐藏,
+                <br>
+                auto:为标签添加滚动条，将溢出的部分在滚动条里显示。
+            </li>
+            <h2>HTML5新增的样式</h2>
+        <li>
+            @keyframes 名称:{from{}to{}}；创建一个动画 并附加一个名字
+            <br>
+            from表示动画最初最开始的样式。to表示动画结束的样式
+            <br>
+            animation:name time;调用动画排序。infinite:无线循环,linear:匀速播放,both:不使动画回到原点，动画结束后不会到原点。
+            <br>
+            animation-direction:alterante:是否反响播放,alternate：是，normal：否。
+        </li>
+        <li>
+            transform:rotate(10deg);角度旋转。
+        </li>
+        <li>
+            tramsform:tradslate(100px,100px)2d移动标签;
+        </li>
+        <li>
+            2d缩放标签，transform:scale(1.5,0.5);
+            <br>
+            水平缩放，竖直缩放
+        </li>
+        <li>
+            transform:skew(10deg,10deg);
+            倾斜转换（水平转换角度，竖值转换角度）
+        </li>
+        <li>
+            background:linear-gradient();
+            <br>
+            背景颜色渐变方向默认从上到下。
+        </li>
+        <li>
+            
+        </li>
+        </ol>
+        
+   </div>
+   
+</body>
+</html>

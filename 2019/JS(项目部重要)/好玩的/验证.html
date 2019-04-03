@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 自己 -->
+    <!-- <input type="text" >
+    <button>提交</button>
+    <script>
+        var btn = document.querySelector("button");
+        var i1 = doucument.querySelector("input")
+        btn.onclick = function(){
+            for(var i = 0; i<i1.length;i++){
+                if(input[i].value==""){
+                    num=1;
+                }else{
+                    num=0;
+                }
+            }
+            if(num==1){
+                alert("请输入文字")
+            }else{
+                alert("注册成功")
+                alert(i4.value+i5.value)
+            }
+        }
+    
+    </script> -->
+
+
+    <!-- <form name="myForm" action="demo_form.php" onsubmit="return validateForm()" method="post">
+        名字: <input type="text" name="fname">
+        <input type="submit" value="提交">
+    </form>
+    <script>
+        function validateForm() {
+            var x = document.forms["myForm"]["fname"].value;
+            if (x == null || x == "") {
+                alert("需要输入名字。");
+                return false;
+            }
+        }
+    </script> -->
+
+
+
+
+    <p>请输入 1 到 10 之间的数字：</p>
+
+    <input id="numb">
+
+    <button type="button" onclick="myFunction()">提交</button>
+
+    <p id="demo"></p>
+
+    <script>
+        function myFunction() {
+            var x, text;
+
+            // 获取 id="numb" 的值
+            x = document.getElementById("numb").value;
+
+            // 如果输入的值 x 不是数字或者小于 1 或者大于 10，则提示错误 Not a Number or less than one or greater than 10
+            if (isNaN(x) || x < 1 || x > 10) {
+                alert("输入错误");
+            } else {
+                 alert("输入正确");
+            }
+            document.getElementById("demo").innerHTML = text;
+        }
+    </script>
+
+
+
+
+    <!-- <form action="demo_form.php" method="post">
+        <input type="text" name="fname" required="required">
+        <input type="submit" value="提交">
+    </form>
+
+    <p>点击提交按钮，如果输入框是空的，浏览器会提示错误信息。</p> -->
+
+
+
+    <!-- <form name="myForm" action="demo-form.php" onsubmit="return validateForm();" method="post">
+        Email: <input type="text" name="email">
+        <input type="submit" value="提交">
+    </form>
+    <script>
+        function validateForm() {
+            var x = document.forms["myForm"]["email"].value;
+            var atpos = x.indexOf("@");
+            var dotpos = x.lastIndexOf(".");
+            if (atpos < 1 || dotpos < atpos + 2 || dotpos + 2 >= x.length) {
+                alert("不是一个有效的 e-mail 地址");
+                return false;
+            }
+        }
+    </script> -->
+</body>
+
+</html>

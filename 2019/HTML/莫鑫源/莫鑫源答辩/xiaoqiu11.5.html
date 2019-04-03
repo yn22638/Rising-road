@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #header{
+            width: 600px;
+            height: 200px;
+            border: 1px solid red;
+            margin: 0 auto;
+        }
+        #header .box_1{
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: green;
+            position: absolute;
+            animation: 4s a infinite;
+        }
+        @keyframes a{
+            20%{ 
+                margin-left: 100px;
+                margin-top: 170px;
+            }
+            40%{
+                margin-left: 200px;
+                margin-top: 0px;
+            }
+            60%{
+                margin-left: 300px;
+                margin-top: 170px;
+            }
+            70%{
+                margin-left: 450px;
+                margin-top: 0px;
+            }
+            80%{
+                margin-left: 600px;
+                margin-top: 180px;
+            }
+            100%{
+                margin-left:0px;
+                margin-top: 0px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <div class="box_1">
+
+        </div>
+    </div>
+</body>
+</html>

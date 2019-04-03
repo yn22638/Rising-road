@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #toph2{
+            width: 1200px;
+            height: 60px;
+            display: block;
+        }
+        #toph2 .ul1 li{
+        list-style: none;
+        width: 124px;
+        height: 60px;
+        float: left;
+        background-color:rgb(66, 66, 58);
+        color:white;
+        line-height: 60px;
+        text-align: center;
+        border-right: 1px solid #4a4a4a;
+    }   
+    #toph2 .ul1 li:hover{
+            background-color: #50bbdb;
+        }
+        #toph3{
+            width: 1200px;
+            height: 60px;
+            display: none;
+        }
+        #toph3 .ul1 li{
+            list-style: none;
+            width: 124px;
+            height: 60px;
+            background-color:rgb(66, 66, 58);
+            color:white;
+            line-height: 60px;
+            text-align: center;
+            border-right: 1px solid #4a4a4a;
+        }
+       
+        @media screen and (max-width:500px){
+            #toph2{
+                display: none;
+            }
+            #toph3{
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="toph2">
+        <ul class="ul1">
+                <li class="li1">博易主页</li>
+                <li>公司简介</li>
+                <li>博易课堂</li>
+                <li>博易纪要</li>
+                <li>技术博客</li>
+                <li>博易英雄榜</li>
+                <li>公司位置</li>
+                <li>联系我们</li>
+        </ul>
+    </div>
+    <div id="toph3">
+            <ul class="ul1">
+                    <li class="li1">博易主页</li>
+                    <li>公司简介</li>
+                    <li>博易课堂</li>
+                    <li>博易纪要</li>
+                    <li>技术博客</li>
+                    <li>博易英雄榜</li>
+                    <li>公司位置</li>
+                    <li>联系我们</li>
+            </ul>    
+    </div>
+</body>
+</html>

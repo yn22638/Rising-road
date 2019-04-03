@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .active {
+            background-color: red;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <ul class="nav">
+        <li>香蕉</li>
+        <li>苹果</li>
+        <li>鸭梨</li>
+    </ul>
+    <script src="jquery.js"></script>
+    <script>
+        $(".nav li:eq(1)").addClass("active");
+        //找到nav中的li元素找到class名为nav中，左右li的第二个元素，这里需要注意的是元素的索引（编号）从0开始，所以1代表第二个
+    </script>
+</body>
+
+</html>
