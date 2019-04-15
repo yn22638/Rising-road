@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="vue.js"></script>
+    v-for 可以通过一个对象的属性来迭代数据：
+
+    <div id="app">
+        <ul>
+            <li v-for="value in object">
+                {{ value }}
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                object: {
+                    name: '菜鸟教程',
+                    url: 'http://www.runoob.com',
+                    slogan: '学的不仅是技术，更是梦想！'
+                }
+            }
+        })
+    </script>
+
+
+    你也可以提供第二个的参数为键名：
+    <div id="ap">
+        <ul>
+            <li v-for="(value, key) in object">
+                {{ key }} : {{ value }}
+            </li>
+        </ul>
+    </div>
+    <script>
+        new Vue({
+            el: '#ap',
+            data: {
+                object: {
+                    name: '菜鸟教程',
+                    url: 'http://www.runoob.com',
+                    slogan: '学的不仅是技术，更是梦想！'
+                }
+            }
+        })
+    </script>
+
+
+    第三个参数为索引：
+    <div id="p">
+        <ul>
+            <li v-for="(value, key, index) in object">
+                {{ index }}. {{ key }} : {{ value }}
+            </li>
+        </ul>
+    </div>
+    <script>
+        new Vue({
+            el: '#p',
+            data: {
+                object: {
+                    name: '菜鸟教程',
+                    url: 'http://www.runoob.com',
+                    slogan: '学的不仅是技术，更是梦想！'
+                }
+            }
+        })
+    </script>
+
+
+    v-for 也可以循环整数
+    <div id="a">
+        <ul>
+            <li v-for="n in 10">
+                {{ n }}
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        new Vue({
+            el: '#a'
+        })
+    </script>
+</body>
+
+</html>

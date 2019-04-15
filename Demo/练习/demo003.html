@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>js时分秒毫秒倒计时</title>
+</head>
+
+<body>
+    <div>
+        <span id="_d">00</span>
+        <span id="_h">00</span>
+        <span id="_m">00</span>
+        <span id="_s">00</span>
+        <span id="_ms">00</span>
+    </div>
+    <script type="text/javascript">
+        //倒计时
+        function GetRTime() {
+            var EndTime = new Date('2020/06/06');   //终止时间
+            var NowTime = new Date();
+            var t = EndTime.getTime() - NowTime.getTime();
+            var d = parseInt(t / 1000 / 60 / 60 / 24);
+            h = parseInt(t / 1000 / 60 / 60 % 24);
+            m = parseInt(t / 1000 / 60 % 60);
+            s = parseInt(t / 1000 % 60);
+            d < 10 ? d = '0' + d : d = d;
+            h < 10 ? h = '0' + h : h = h;
+            m < 10 ? m = '0' + m : m = m;
+            s < 10 ? s = '0' + s : s = s;
+            console.log(d + '天' + h + '时' + m + '分' + s + '秒');
+
+            //将倒计时赋值到div中
+            document.getElementById("_d").innerHTML = d;
+            document.getElementById("_h").innerHTML = h;
+            document.getElementById("_m").innerHTML = m;
+            document.getElementById("_s").innerHTML = s;
+            if (t < 0) {
+
+                clearTimeout(GetRTime);
+                return false;
+            }
+            setTimeout(GetRTime, 1000);
+        }
+        GetRTime();
+    </script>
+</body>
+
+</html>

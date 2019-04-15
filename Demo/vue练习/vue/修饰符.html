@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .big {
+            width: 200px;
+            height: 200px;
+            background-color: yellow;
+        }
+
+        .small {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <!-- .stop -->
+    <div id="app">
+        <div v-on:click="bigEvent" class="big">
+            <!-- 去掉.stop，事件会冒泡，添加.stop可以阻止事件冒泡 -->
+            <div v-on:click.stop="smallEvent" class="small"></div>
+        </div>
+    </div>
+    <script src="vue.js"></script>
+    <script>
+        new Vue({
+            el: "#app",
+            methods: {
+                bigEvent: function () {
+                    console.log("点击big div");
+                },
+                smallEvent: function () {
+                    console.log("点击small div");
+                }
+            }
+        })
+    </script>
+
+
+    <!-- .once -->
+    <div id="ap">
+        <button @click.once="myEven">弹出</button>
+    </div>
+    <script>
+        new Vue({
+            el: "#ap",
+            methods: {
+                myEven: function () {
+                    alert("掷弹出一次")
+                }
+            }
+        })
+    </script>
+
+</html>

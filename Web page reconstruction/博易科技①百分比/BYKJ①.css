@@ -1,0 +1,301 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100%;
+    height: 1500px;
+}
+#header{
+    width: 52.5%;
+    height: 10.6%;
+    margin: 0 auto;
+}
+#header .logo{
+    width: 100%;
+    height: 62.5%;
+}
+#header .logo img{
+    float: left;
+    margin-top: 3%;
+    margin-left: 1.1%;
+}
+#header .logo input{
+    padding: 0.8%;
+    float: left;
+    margin-top: 4%;
+    margin-left: 45%;
+    width: 16%;
+    height: 3%;
+}
+#header .list{
+    width: 100%;
+    height: 37.5%;
+    background-color: #323232;
+}
+#header .list ul{
+    width: 100%;
+    height: 100%;
+}
+#header .list ul .li1 {
+    float: left;
+    list-style: none;
+    width: 12.3%;
+    height: 59px;
+    line-height: 59px;
+    text-align: center;
+    border-right: 1px solid #4b4b4b;
+}
+#header .list ul li a{
+    color: #fff;
+    text-decoration:none;
+}
+#header .list ul .li2 {
+    float: left;
+    list-style: none;
+    width: 110px;
+    height: 59px;
+    line-height: 59px;
+    text-align: center;
+}
+#banner{
+    width: 52.5%;
+    height: 31.4%;
+    margin: 0 auto;
+}
+#banner img{
+    width: 100%;
+    height: 100%;
+}
+#centent{
+    width: 52.5%;
+    height: 52.7%;
+    /* 790 */
+    margin: 0 auto;
+}
+#centent .new{
+    width: 100%;
+    height: 33.4%;
+    /* 264 */
+}
+#centent .new .n1{
+    width: 52.4%;
+    height: 100%;
+    float: left;
+}
+#centent .new .n1 h4{
+    margin-top: 8%;
+    margin-left: 1.1%;
+    float: left;
+}
+#centent .new .n1 ul{
+    clear: both;
+    width: 100%;
+    height: 60%;
+    margin-left: 4%;
+    margin-top: 2%;
+    float: left;
+}
+#centent .new .n1 ul li{
+    font-size: 13px;
+    margin-top: 2%;
+}
+#centent .new .n1 ul li span{
+    margin-right: 11%;
+    float:right;
+    font-size: 13px;
+}
+#centent .new .n2{
+    width: 24%;
+    height: 85%;
+    float: left;
+    background-color: #e2e2e2;
+}
+#centent .new .n2 h4{
+    margin-top: 19%;
+    float: left;
+    margin-left: 6%;
+}
+#centent .new .n2 .p1{
+    clear: both;
+    float: left;
+    margin-left: 6%;
+    margin-top: 12%;
+    font-size: 13px;
+}
+#centent .new .n2 .p2{
+    clear: both;
+    float: left;
+    margin-left: 6%;
+    margin-top: 13%;
+    font-size: 13px;
+    color: #a9a9a9;
+    line-height: 24px;
+}
+#centent .new .n3{
+    width: 23.6%;
+    height: 100%;
+    float: left;
+}
+#centent .new .n3 h4{
+    margin-top: 19%;
+    float: left;
+    margin-left: 4%;
+}
+#centent .new .n3 .p1{
+    clear: both;
+    float: left;
+    margin-left: 4%;
+    margin-top: 6%;
+    font-size: 13px;
+    line-height: 22px;
+}
+#centent .luntan{
+    width: 100%;
+    height: 34.8%;
+}
+#centent .luntan .l1{
+    width: 100%;
+    height: 12%;
+}
+#centent .luntan .l1 h4{
+    margin-left: 1.1%;
+}
+#centent .luntan .l2{
+    width: 100%;
+    height: 88%;
+}
+#centent .luntan .l2 .t1{
+    width: 22.5%;
+    height: 100%;
+    float: left;
+    margin-left: 1.1%;
+}
+#centent .luntan .l2 .t1 img{
+    width: 93.7%;
+    height: 67.3%;
+}
+#centent .luntan .l2 .t1 p{
+    clear: both;
+    float: left;
+    margin-top: 2%;
+    font-size: 12px;
+    line-height: 22px;
+}
+#centent .luntan .l2 .t2{
+    float: left;
+    width: 22%;
+    height: 100%;
+    margin-left: 3%;
+}
+#centent .luntan .l2 .t2 img{
+    width: 100%;
+    height: 67.3%;
+}
+#centent .luntan .l2 .t2 p{
+    clear: both;
+    float: left;
+    margin-top: 2%;
+    font-size: 12px;
+    line-height: 22px;
+}
+#centent .luntan .l2 .t3{
+    float: left;
+    width: 22%;
+    height: 100%;
+    margin-left: 3%;
+}
+#centent .luntan .l2 .t3 img{
+    width: 100%;
+    height: 67.3%;
+}
+#centent .luntan .l2 .t3 p{
+    clear: both;
+    float: left;
+    margin-top: 2%;
+    font-size: 12px;
+    line-height: 22px;
+}
+#centent .luntan .l2 .t4{
+    float: left;
+    width: 22%;
+    height: 100%;
+    margin-left: 3%;
+}
+#centent .luntan .l2 .t4 img{
+    width: 100%;
+    height: 67.3%;
+}
+#centent .luntan .l2 .t4 p{
+    clear: both;
+    float: left;
+    margin-top: 2%;
+    font-size: 12px;
+    line-height: 22px;
+}
+#centent .qianduan{
+    width: 100%;
+    height: 31.6%;
+    background-color: #e5e5e5;
+}
+#centent .qianduan .q{
+    width: 52.3%;
+    height: 100%;
+}
+#centent .qianduan .q .qq{
+    width: 87.5%;
+    height: 23.2%;
+    border-bottom: 1px solid #c1c1c1;
+    margin-left: 6%;
+
+}
+#centent .qianduan .q .qq p{
+    float: left;
+    width: 100%;
+    height: 100%;
+    line-height: 58px;
+    margin-left: 2%;
+    font-size: 14px;
+    color: #5a5a5a;
+}
+#centent .qianduan .q .qb{
+    margin-top: 3.5%;
+    width: 87.5%;
+    height: 68.8%;
+    margin-left: 6%;
+}
+#centent .qianduan .q .qb .u1{
+    width: 25.1%;
+    height: 100%;
+    list-style: none;
+    float: left;
+}
+#centent .qianduan .q .qb .u1 li{
+    font-size: 12px;
+    line-height: 24px;    
+    color: #949494;
+}
+#centent .qianduan .q .qb .u2{
+    width: 22.3%;
+    height: 100%;
+    list-style: none;
+    float: left;
+    margin-left: 7.4%;
+}
+#centent .qianduan .q .qb .u2 li{
+    font-size: 12px;
+    line-height: 24px;
+    color: #949494;
+}
+#centent .qianduan .q .qb .u3{
+    width: 22.3%;
+    height: 100%;
+    list-style: none;
+    float: left;
+    margin-left: 20%;
+}
+#centent .qianduan .q .qb .u3 li{
+    font-size: 12px;
+    line-height: 24px;
+    color: #949494;
+}

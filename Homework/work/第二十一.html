@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #app {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        button {
+            width: 50px;
+            height: 30px;
+            margin-left: 30px;
+            color: blue;
+            border: 0px;
+        }
+    </style>
+</head>
+<script src="vue.js"></script>
+
+<body>
+    <!-- <div id="app">
+        <p>{{studentName}}</p>
+        <button @click="getName">点名</button>
+        <button @click="stopName">结束</button>
+    </div>
+    
+    <script>
+        new Vue({
+            el: "#app",
+            data: {
+                lastName: ["张三", "李四", "王寡妇", "小明", "金枝", "静恬", "允儿", "杨幂", "晶灵", "林志玲", "嘉懿", "流行", "邓超", "郭琦"
+                    , "允儿", "许大妈", "林妹妹", "杨幂", "佳思", "吉玉", "张焕", "张赛", "师傅", "菊月"],
+                studentName: "开始",
+                t: "",
+            },
+            methods: {
+                getRandom() {
+                    return Math.floor(Math.random() * this.lastName.length)
+                },
+                getName() {
+                    this.t = setInterval(() => {
+                        this.studentName = this.lastName[this.getRandom()]
+                    }, 100)
+                },
+                stopName() {
+                    clearInterval(this.t);
+                    alert("请" + this.studentName + "同学来回答问题");
+                }, 
+            }
+        })
+    </script> -->
+    <!-- <div id="app">
+        <p>{{studentName}}</p>
+        <button @click="getName">开始</button>
+        <button @click="stopName">停止</button>
+    </div>
+    <script>
+        new Vue({
+            el:"#app",
+            data:{
+                studentName:"开始",
+                lastName:["张三", "李四", "王寡妇", "小明", "金枝", "静恬", "允儿", "杨幂", "晶灵", "林志玲", "嘉懿", "流行", "邓超", "郭琦"
+                    , "允儿", "许大妈", "林妹妹", "杨幂", "佳思", "吉玉", "张焕", "张赛", "师傅", "菊月"],
+                t:"",
+            },
+            methods:{
+                getRandom(){
+                    return this.studentName = Math.floor(Math.random()*this.lastName.length);
+                },
+                getName(){
+                    this.t = setInterval(() => {
+                        this.studentName = this.lastName[this.getRandom()]
+                    }, 100);
+                },
+                stopName(){
+                    clearInterval(this.t);
+                    alert("请" + this.studentName + "同学回答");
+                }
+            }
+        })
+    </script> -->
+
+    <div id="app">
+        <span>{{studentName}}</span>
+        <button @click="getName">开始</button>
+        <button @click="stopName">结束</button>
+    </div>
+    <script>
+        new Vue({
+            el:"#app",
+            data:{
+                lastName:["张三", "李四", "王寡妇", "小明", "金枝", "静恬", "允儿", "杨幂", "晶灵", "林志玲", "嘉懿", "流行", "邓超", "郭琦"
+                    , "允儿", "许大妈", "林妹妹", "杨幂", "佳思", "吉玉", "张焕", "张赛", "师傅", "菊月"],
+                studentName:"",
+                t:null,
+            },
+            methods:{
+                getRandom(){
+                    return this.studentName = Math.floor(Math.random()*this.lastName.length);
+                },
+                getName(){
+                    if(this.t!=null) return 
+                    this.t = setInterval(() => {
+                        this.studentName = this.lastName[this.getRandom()]
+                    }, 200);
+                },
+                stopName(){
+                    clearInterval(this.t);
+                    alert("请" + this.studentName + "同学来回答");
+                    this.t = null;//每当清除了定时器以后，需要重新把t得值为null；
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

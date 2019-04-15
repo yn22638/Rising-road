@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script src="vue.js"></script>
+
+<body>
+    <!-- <div id="app">
+        {{d}}:
+        {{h}}:
+        {{m}}:
+        {{s}}
+    </div>
+
+    
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                d: "",
+                h: "",
+                m: "",
+                s: "",
+            },
+            created() {
+                
+                setInterval(() => {
+                    let istime = new Date("2019-6-6").getTime();
+                    let now = new Date().getTime();
+                    let tar = istime - now;
+                    let d = Math.floor(tar/1000/60/60/24)
+                    let h = Math.floor(tar/1000/60/60%24)
+                    let m = Math.floor(tar/1000/60%60)
+                    let s = Math.floor(tar/1000%60);
+                    this.d = d;
+                    this.h = h;
+                    this.m = m;
+                    this.s = s;
+                }, 1000);
+
+            }
+        }) -->
+
+    <div id="app">
+        距离2019-6-6还有
+        {{day}}天:
+        {{hours}}小时:
+        {{minutes}}分钟:
+        {{seconds}}秒
+    </div>
+    <script>
+        new Vue({
+            el: "#app",
+            data: {
+                day: "",
+                hours: "",
+                minutes: "",
+                seconds: "",
+            },
+            created() {
+                setInterval(() => {
+                    let isTime = new Date("2019-6-6").getTime();
+                    let now = new Date().getTime();
+                    let tar = isTime - now;
+                    let seconds = Math.floor(tar / 1000 % 60);
+                    let minutes = Math.floor(tar / 1000 / 60 % 60);
+                    let hours = Math.floor(tar / 1000 / 60 / 60 % 24);
+                    let day = Math.floor(tar / 1000 / 60 / 60 / 24);
+                    this.day = day;
+                    this.hours = hours;
+                    this.minutes = minutes;
+                    this.seconds = seconds;
+                }, 1000);
+            }
+        })
+    </script>
+    </script>
+</body>
+
+</html>

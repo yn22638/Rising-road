@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        span {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" placeholder="请输入添加内容" class="i1">
+    <button class="btn">添加</button>
+    <ul class="list">
+        <li>banner <span class="del">删除</span>
+        </li>
+        <li>appo <span class="del">删除</span></li>
+        <li>ningmeng <span class="del">删除</span></li>
+    </ul>
+    <script src="jquery.js"></script>
+    <script>
+
+        //dom操作
+        var i1 = document.querySelector(".i1");
+        var btn = document.querySelector(".btn");
+        var ul = document.getElementById("list");
+        btn.addEventListener("click", function () {
+            var text = i1.value;
+            var li = document.createElement("li");
+            li.innerHTML = text;
+            ul.appendChild(li);
+            });
+        var aDel = document.querySelectorAll(".del");
+        for (var i = 0; i < aDel.length; i++) {
+            aDel[i].onclick = function () {
+                var parent = this.parentNode//可以成为上一层节点
+                parent.parentNode.removeChild(parent)
+            }
+        }
+
+        //jquery方法
+        // $(".btn").click(function () {
+        //     var text = $(".i1").val();
+        //     var $li = $("<li>");
+        //     $li.append(text);
+        //     var $del = $("<span class='del'> 删除</span>")
+        //     $li.append($del);
+        //     $(".list").append($li);
+        // })
+        // $(".list").delegate(".del", "click", function () {
+        //     $(this).parent().remove();
+        // })
+    </script>
+</body>
+
+</html>

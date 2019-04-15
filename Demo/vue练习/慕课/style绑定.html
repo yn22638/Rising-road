@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="vue.js"></script>
+    <div id="app">
+        {{msg}}
+        <div v-for="item in list">
+            <div v-if="item.age > 17" v-bind:style="styleMsg">
+                {{item.name}}
+            </div>
+            <div v-else>
+                {{item.age}}
+            </div>
+
+        </div>
+    </div>
+    <script>
+        new Vue({
+            el: "#app",
+            data: {
+                msg: "hello vue",
+                styleMsg:{
+                    color:"yellow",
+                    textShadow:"1 1 10px green"
+                },
+                list: [
+                    {
+                        name: "liwei",
+                        age: 17,
+                    }, {
+                        name: "xiaozhang",
+                        age: 18,
+                    }
+                ]
+            }
+        })
+
+    </script>
+</body>
+
+</html>

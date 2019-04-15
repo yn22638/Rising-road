@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{margin:0px;padding:0px;}
+		#box{margin:0px auto;border:1px solid greenyellow;width:666px;height:366px;text-align:center;font-size:66px;line-height:366px;}
+		#btn{margin:50px auto;width:200px; text-align:center;font-size:25px;color:yellowgreen;}
+	</style>
+</head>
+<body>
+	<div id="box">今晚谁陪你睡！</div>
+	<div id="btn" onclick="doit()">开始翻牌</div>
+</body>
+<script>
+		//找对象
+			var box = document.getElementById('box');
+			var btn = document.getElementById('btn');
+			var timmer;
+		//改属性
+		//准备一组数据   就是我们要翻牌的名字
+		var nameList = ['狗哥','想哥','猴哥','土申哥','旺儒哥','龙哥','杰哥','八哥',"小明", "金枝","静恬","允儿","杨幂","晶灵","林志玲","嘉懿","流行","邓超","郭琦"
+        ,"允儿","许大妈","林妹妹","杨幂","佳思","吉玉","张焕","张赛","师傅","菊月"];
+		//让名字能动起来
+		function show(){
+			//随机下标
+			var num = Math.floor(Math.random()*nameList.length);
+			//console.log(num);
+			//让我们的名字显示在box div里面
+			box.innerHTML = nameList[num];
+			//让我们的名字动起来
+			timmer = setTimeout(show,100); 
+		}
+		//show();
+	function doit(){
+		//alert(timmer);
+		//console.log(1);
+		//show();
+		//判断你是否是开始滚动 如果timmer等于undefined说明你需要开始滚动如果不是则需要停止
+		if(timmer == undefined){
+			show();
+			//修改按钮的内容
+			btn.innerHTML = '停止翻牌';
+		}else{
+			//清空定时器
+			clearTimeout(timmer);
+			//修改按钮的内容
+			btn.innerHTML = '开始翻牌';
+			timmer = undefined;
+		}
+
+	}
+</script>
+
+</html>

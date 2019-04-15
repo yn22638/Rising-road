@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        距离2019-6-6还有
+       {{day}} 天
+       {{hours}}小时
+       {{minutes}}分钟
+       {{seconds}}秒
+    </div>
+    <script src="vue.js"></script>
+    <script>
+        new Vue({
+            el:'#app',
+            data:{
+                day:'',
+                hours:'',
+                minutes:'',
+                seconds:''
+            },
+            created(){
+                setInterval(()=>{
+                    let time = new Date();
+                    let target = new Date("2019-6-6");
+                    let nowtime =  time.getTime();
+                    let targettime = target.getTime();
+                    let result = targettime-nowtime;
+                    let seconds  = Math.floor(result/1000%60)
+                    let minutes  = Math.floor(result/1000/60%60)
+                    let hours  = Math.floor(result/1000/60/60%24)
+                    let day  = Math.floor(result/1000/60/60/24)
+                    this.seconds= seconds
+                    this.minutes= minutes
+                    this.hours= hours
+                    this.day= day
+                    // console.log(seconds)
+                    // console.log(nowtime);
+                    // console.log(targettime);
+                },500)
+            }
+        })
+    </script>
+</body>
+</html>

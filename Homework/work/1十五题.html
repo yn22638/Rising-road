@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        var array = [5,50,6,11,18,62,31,52,19];
+            for(var i=0;i<array.length-1;i++){  //大for判断的是最外侧的轮数
+                for(var j=0;j<array.length-1-i;j++){ //里面的小for用来判断每轮循环的次数
+                    if(array[j]>array[j+1]){
+                        temp = array[j];
+                        array[j] = array[j+1];
+                        array[j+1] = temp;
+                        // c语言
+                        // array[j]=array[j]^array[j+1]
+                        // array[j+1]=array[j]^array[j+1]
+                        // array[j]=array[j]^array[j+1]
+                    }
+                }
+            }
+            document.write(array)
+    </script>
+</body>
+</html>

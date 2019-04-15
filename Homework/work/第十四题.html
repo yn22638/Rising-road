@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>开始</button>
+    <script>
+        var btn = document.querySelector("button");
+        let lastName = ["小明", "小红", "小绿", "1", "2", "3", "4", "5", "6", "7", "8"];
+        function getName() {
+            let random = Math.floor(Math.random() * lastName.length);
+            return lastName[random];
+        };
+        btn.onclick = function () {
+            var span = getName();
+            console.log(span);
+        }
+
+
+    </script>
+</body>
+
+</html>

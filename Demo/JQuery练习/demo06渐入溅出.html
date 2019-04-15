@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="box" style="width:100px;height: 100px;background-color: yellow;"></div>
+    <button class="bt1">显示</button>
+    <button class="bt2">隐藏</button>
+
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".bt1").click(function () {
+                $(".box").fadeIn(1000);//1000毫秒后显示
+            })
+            $(".bt2").click(function () {
+                $(".box").fadeOut(1000);//1000毫秒后显示
+            })
+        })
+    </script>
+</body>
+
+</html>

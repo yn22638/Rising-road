@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        //创建
+        var arr = new Array();   //创建数组
+        var reg = new RegExp();  //创建正则表达式
+
+
+
+        var arr = [1, 2, 3];   //创建数组
+        var reg = /123/;     //创建正则表达式
+
+
+
+
+        var reg = /123/;  //创建了一个正则表达式，这个正则表达式可以匹配字符串"123"
+        var str = "123";  //创建字符串"123"
+        console.log(reg.test(str));  //test方法可以测试字符串是否成功匹配，匹配返回true，不匹配返回false
+
+        //esec
+        var reg = /123/;
+        var str = "012345";
+        console.log(reg.exec(str)); //exec方法返回一个数组，数组中包含匹配的内容，如果未匹配，返回null
+
+
+        var reg = /^123$/;  //^表示开头，$表示结尾，两个符号之间是匹配的内容
+        var str = "012345";
+        console.log(reg.exec(str));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //第一种
+        // var array = [5, 10, 6, 11, 18, 22, 11, 31, 6, 52, 19];
+        // function unique(arr) {
+        //     var result = [], hash = {};
+        //     for (var i = 0, elem; (elem = arr[i]) != null; i++) {
+        //         if (!hash[elem]) {
+        //             result.push(elem);
+        //             hash[elem] = true;
+        //         }
+        //     }
+        //     return result;
+        // }
+        // var arr = unique(array);
+        // console.log(arr);
+
+
+
+        // //第二种
+        // var color = [5, 10, 6, 11, 18, 22, 11, 31, 6, 52, 19];
+        // function unique(arr) {
+        //     // 遍历arr，把元素分别放入tmp数组(不存在才放)
+        //     var tmp = new Array();
+        //     for (var i in arr) {
+        //         //该元素在tmp内部不存在才允许追加
+        //         if (tmp.indexOf(arr[i]) == -1) {
+        //             tmp.push(arr[i]);
+        //         }
+        //     }
+        //     return tmp;
+        // }
+        // var arr = unique(color);
+        // console.log(arr);
+
+
+
+        // //第三种    
+        // var color = [5, 10, 6, 11, 18, 22, 11, 31, 6, 52, 19];
+        // function unique(arr) {
+        //     var tmp = new Array();
+        //     for (var m in arr) {
+        //         tmp[arr[m]] = 1;
+        //     }
+        //     //再把键和值的位置再次调换
+        //     var tmparr = new Array();
+        //     for (var n in tmp) {
+        //         tmparr.push(n);
+        //     }
+        //     return tmparr;
+        // }
+        // var arr = unique(color);
+        // console.log(arr);
+
+
+
+        //第四种 自己
+        var array = [5, 10, 6, 11, 18, 22, 11, 31, 6, 52, 19];
+        Array.prototype.method1 = function () {
+            var arr = [];    //定义一个临时数组 
+            for (var i = 0; i < array.length; i++) {    //循环遍历当前数组 
+                //判断当前数组下标为i的元素是否已经保存到临时数组 
+                //如果已保存，则跳过，否则将此元素保存到临时数组中 
+                if (arr1.indexOf(array[i]) == -1) {
+                    arr.push(array[i]);
+                }
+            }
+            return arr;
+        }
+        console.log(arr)
+    </script>
+</body>
+
+</html>
