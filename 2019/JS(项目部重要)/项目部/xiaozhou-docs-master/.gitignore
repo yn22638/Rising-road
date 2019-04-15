@@ -1,8 +1,0 @@
-node_modules/
-.DS_Store
-*.tgz
-my-app*
-template/src/__tests__/__snapshots__/
-_book
-*.mp3
-*.mp4
