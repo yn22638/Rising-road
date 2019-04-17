@@ -7,3 +7,4 @@
 * homework:个人作业
 * Web page reconstruction:网页重构
 * Plug-in unit:插件
+* Error correction:报错修改
