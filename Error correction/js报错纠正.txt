@@ -1,0 +1,3 @@
+ 1.Do not use built-in or reserved HTML elements as component id: body
+    答：这样的报错原因是因为在App.vue父组件里有<component></component>标签，有重名了。所以要把原来的标签名换掉，例:<componentHello>。这里尽量不要设置为component。
+这样的报错还有一个点就是，在子组件里使用console.log(msg)。在控制台是接收不到父组件的参数的。控制台会显示：undefault

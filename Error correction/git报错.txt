@@ -1,0 +1,2 @@
+1. ! [rejected]        master -> master (fetch first)
+可以使用强制推送模式git push -f 远程仓库别名 本地项目分支 其中-f表示使用强制模式
