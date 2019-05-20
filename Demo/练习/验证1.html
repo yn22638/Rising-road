@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ajax登陆验证</title>
+    <script type="text/javascript">
+        function checkAccount() {
+            var xmlhttp;
+            var name = document.getElementById("account").value;
+            if (window.XMLHttpRequest)
+                xmlhttp = new XMLHttpRequest();
+            else
+                xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+
+            xmlhttp.open("GET", "login.php?account=" + name, true);
+            xmlhttp.send();
+
+            xmlhttp.onreadystatechange = function() {
+                if (xmlhttp.readyState == 4 && xmlhttp.status == 200)
+                    document.getElementById("accountStatus").innerHTML = xmlhttp.responseText;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div id="content">
+        <h2>使用Ajax实现异步登陆验证</h2>
+        <form>
+            账 号：<input type="text" id="account" autofocus required onblur="checkAccount()"></input><span id="accountStatus"></span><br><br> 密 码：<input type="password" id="password" required></input><span id="passwordStatus"></span><br><br>
+            <input type="submit" value="登陆"></input>
+        </form>
+    </div>
+</body>
+
+</html>
