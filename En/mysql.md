@@ -7,7 +7,6 @@
         drop database 数据库名称;
 ### 4.use 数据库名称
         访问进入数据库,(返回Database changed,说明进入成功)
-
 ___
 ## 报错纠正
     1.ERROR 1007 (HY000): Can't create database 'demo'; database exists
