@@ -44,6 +44,9 @@ ___
 ### 7.不允许为空
         ERROR 1048 (23000): Column 'num' cannot be null
 ___
+## 清楚表中的数据
+        truncate  table  表名;
+___
 ## 向表中插入数据
         insert into 表名(想插入的字段名称...) values(想插入的字段的值)
         insert into 表名 values(表中所有字段的值)
