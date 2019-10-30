@@ -1,4 +1,9 @@
 #  Mysql基础
+
+## 在CMD命令窗口敲入命令 
+
+mysql -hlocalhost -uroot -p
+
 ### 1.查看数据库
         show databases;
 ### 2.创建数据库
