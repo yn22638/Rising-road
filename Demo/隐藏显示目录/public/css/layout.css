@@ -1,0 +1,26 @@
+.clear:before,
+.clear:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.box{
+    height:50px;
+}
+.box nav{
+    position: fixed;
+    width:100%;
+    z-index: 999;
+}
+
+.footer {
+    height: 60px;
+    background-color: #f9f9f9;
+    /* color: #337ab7; */
+    text-align: center;
+    line-height: 60px;
+    margin-top:30px;
+}
+.bookName{
+    color:#dbdbdb !important;
+}

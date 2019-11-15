@@ -1,0 +1,95 @@
+.index{
+    margin-top:20px;
+}
+
+.carousel-inner img{
+    width:100%;
+}
+
+.thum{
+    margin-top:20px;
+}
+
+.contentfooter .HomeContent {
+    width: 100%;
+    min-height: 600px;
+}
+
+.contentfooter .HomeContent .top {
+    width: 94%;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    margin: 0 auto;
+    margin-top: 20px;
+    box-sizing: border-box;
+}
+
+.contentfooter .HomeContent .top .front {
+    width: 100%;
+    height: 50px;
+    background: #7abbff;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    box-sizing: border-box;
+}
+
+.contentfooter .HomeContent .top .front a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.contentfooter .HomeContent .top .front p {
+    margin-left: 22px;
+    line-height: 50px;
+}
+
+.contentfooter .HomeContent .top .cont {
+    width: 100%;
+    /* 595 */
+    /* float: left; */
+}
+
+.contentfooter .HomeContent .top .cont .identical {
+    padding: 12px 20px;
+    height: 170px;
+    background-color: #edf5ff;
+    border: 1px solid #edf5ff;
+    border-radius: 5px;
+    box-sizing: border-box;
+    /* float: left; */
+    position: relative;
+}
+
+.contentfooter .HomeContent .top .cont .cont-content {
+    padding: 10px;
+}
+
+
+.contentfooter .HomeContent .top .cont .identical a {
+    color: black;
+    text-decoration: none;
+    display:block;
+    width:100%;
+    height:100%;
+    text-align: center;
+    line-height: 100%;;
+}
+
+.contentfooter .HomeContent .top .cont .identical a h4{
+    height:100%;
+    line-height: 50px;
+    
+}
+
+.contentfooter .HomeContent .top .cont .identical p {
+    /* margin-top: 14.4%; */
+    margin-left: 4.1%;
+    /* font-size: 14px; */
+    margin-right: 7.2%;
+}
+
+.contentfooter .HomeContent .top .cont .gengduo {
+    text-align: center;
+    line-height: 113px;
+    font-size: 25px;
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="public/css/book.css">
+    <link rel="stylesheet" href="public/css/github-markdown.min.css">
+    <link rel="stylesheet" href="public/css/github.min.css">
+    <link rel="stylesheet" href="public/css/katex.min.css">
+    <link rel="stylesheet" href="public/css/bootstrap.min.css">
+    <style>
+        .content-text {
+            height: 500px;
+            /* width: 500px; */
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="fe">
+        <div class="nav col-sm-2 hidden-xs pos_nav">
+            <div class="blue">
+                <p>目录</p>
+            </div>
+
+            <div class="chapter">
+                <div class="showSection">
+                    <button class="showSection-btn">+</button>
+                    <a>5254</a>
+                    <ul class="section">
+                        <li>aaaaa</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="content col-sm-10">
+            <div class="menu clear">
+
+                <button class="btn btn-default show visible-xs-block">
+                    目录
+                    <span class="glyphicon glyphicon-th-list"></span>
+                </button>
+            </div>
+            <div class="blue">
+                <p>内容</p>
+            </div>
+            <div class="content-text">
+                asdasd
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <script src="public/js/highlight.min.js"></script>
+    <script src="public/js/katex.min.js"></script>
+    <script src="public/js/jquery.min.js"></script>
+    <script>
+        $(".fe .show").click(function(e) {
+            if ($(".fe .nav").hasClass("hidden-xs")) {
+                $(".fe .nav").removeClass("hidden-xs")
+            } else {
+                $(".fe .nav").addClass("hidden-xs")
+            }
+            e.stopPropagation();
+        })
+        $(".fe .content").click(function() {
+                $(".fe .nav").addClass("hidden-xs")
+            })
+            // $(".fe .showSection").click(function() {
+            //     let text = $(this).find(".showSection-btn").text();
+            //     if (text === "+") {
+            //         $(this).find(".showSection-btn").text("-")
+            //     } else {
+            //         $(this).find(".showSection-btn").text("+")
+            //     }
+            //     $(this).parent().find("ul").toggleClass("section")
+            //         // $(this).parent().find("ul").show();
+            // })
+
+        // /*
+        //     设置目录为展开
+        // */
+        // let chapterID = `{{detail.chapterID}}`
+        // let festID = `{{detail.festID}}`;
+        // let chapter = $(`[chapterID= ${chapterID} ]`);
+        // //删除section让指定章节展开
+        // //添加active，增加小节背景色
+        // if (festID) {
+        //     chapter.find("ul").removeClass("section");
+        //     chapter.find(`[festid=${festID}]`).addClass("active")
+        //         //设置为打开状态
+        //     chapter.find(".showSection-btn").text("-");
+        // }
+
+
+        // //控制文章中图片的样式
+        // $(".content-text").find("img").css("max-width", "100%");
+        // $(".content-text").find("img").parent().css("text-align", "center");
+
+        // //返回顶部
+        // $(".toTop").click(function() {
+        //     $("html,body").animate({
+        //         "scrollTop": "0px"
+        //     }, 200)
+        // })
+    </script>
+</body>
+
+</html>
